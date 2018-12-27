@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        {% block title_ %}
+            Home
+        {% endblock title_ %}
+    </title>
+    <link rel="stylesheet" type="text/css" href='{% static "css/style.css" %}'>
+</head>
+
+<body>
+    <div id="header">
+        <a href="{% url 'shop:product_list' %}"><h1 id='ts'>My shop</h1></a>
+        <div class="cart">
+             Your cart is empty
+        </div>
+    </div>
+    {% block content %}
+        content
+    {% endblock content %}
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+	<div class="product-detail">
+		<img src="
+			{% if product.Image %}
+				{{product.Image.url}}
+			{% else %}
+				{% static 'img/default.png' %}
+			{% endif %}"
+		width=300px>
+		<h1>{{product.name}}</h1>
+		<h2><a href="{{product.category.get_absolute_url}}">{{product.category}}</a><h2>
+		<p class="price">${{product.price}}</p>
+		{{product.description|linebreaks}}
+		
+	</div>
+{% endblock content %}
