@@ -15,7 +15,16 @@
     <div id="header">
         <a href="{% url 'shop:product_list' %}"><h1 id='ts'>My shop</h1></a>
         <div class="cart">
-             Your cart is empty
+            {% with total_items=cart|length %}
+            {% if cart|length > 0 %}
+            Your Cart:
+            <a href="{% url 'cart:cart_detail' %}">
+                            {{total_items}} item {{total_items|pluralize}}, ${{cart.get_total_price}}
+                        </a>
+            {% else %}
+                Your cart is empty
+            {% endif %}
+            {% endwith %}
         </div>
     </div>
     {% block content %}
