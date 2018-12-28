@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title_ %}
+	Your Shopping Cart
+{% endblock title_ %}
+{% block content %}
+	
+	<table>
+
+		<thead class='t-head'>
+			<h1>Your Shopping Cart</h1>
+			<tr>
+				<th>Image</th>
+				<th>Product</th>
+				<th>Quantity</th>
+				<th>Remove</th>
+				<th>Unit Price</th>
+				<th>Price</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% if cart %}
+				{% for item in cart %}
+					{% with  product=item.product %}
+					    <tr>
+					    	<td>
+					    		<a href="{{product.get_absolute_url}}">
+					    			<img src="
+					    				{% if product.Image %}
+					    					{{product.Image.url}}
+					    				{% else %}
+					    					{% static 'img/default.png' %}
+					    				{% endif %}"
+					    			width="100px">
+					    		</a>
+					    	</td>
+					    	<td>{{product.name}}</td>
+					    	<td>
+					    		<form method="post" action="{% url 'cart:cart_add' product.id %}">
+					    			{% csrf_token %}
+					    			{{item.update_quantity_form.quantity}}
+					    			{{item.update_quantity_form.update}}
+					    			<input type="submit" value="Update">
+					    		</form>
+					    	</td>
+					    	<td>
+					    		<a href="{% url 'cart:cart_remove' product.id%}">
+					    			Remove
+					    		</a>
+					    	</td>
+					    	<td>
+					    		{{item.price}}
+					    	</td>
+					    	<td>
+					    		{{item.total_price}}
+					    	</td>
+					    </tr>
+
+					{% endwith %}
+				{% endfor %}
+			{% else %}
+				<tr >
+					<td colspan="4" style="width:100%;text-align:center;">there is no product !</td>
+				</tr>
+			{% endif %}
+				<tr class="total">
+					<td>
+						Total
+					</td>
+					<td colspan="4"></td>
+					<td class="num">${{cart.get_total_price}}</td>
+				</tr>
+		</tbody>
+	</table>
+	<p class="text-right">
+		<a href="#">Continu shopping</a>
+		<a href="#">Checkout</a>
+	</p>
+{% endblock content %}
