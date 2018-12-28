@@ -9,3 +9,7 @@ code lectuer
 [03 Creating shopping cart views](https://github.com/mhadiahmed/ecommerce-with-django2-tutorial/tree/ea9cfa7b5badf43b5cea86145c0c6fe9b41a5d38)
 
 
+[04 Creating a context processor for the current cart](https://github.com/mhadiahmed/ecommerce-with-django2-tutorial/tree/449703f2317e2421855335a8bc95a25c68241990)
+
+
+
