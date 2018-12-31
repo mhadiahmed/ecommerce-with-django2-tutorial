@@ -73,7 +73,7 @@
 		</tbody>
 	</table>
 	<p class="text-right">
-		<a href="#">Continu shopping</a>
-		<a href="#">Checkout</a>
+		<a href="{% url 'shop:product_list' %}">Continu shopping</a>
+		<a href="{% url 'orders:order_create' %}">Checkout</a>
 	</p>
 {% endblock content %}
