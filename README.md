@@ -13,3 +13,7 @@ code lectuer
 
 
 
+[05 Registering customer orders](https://github.com/mhadiahmed/ecommerce-with-django2-tutorial/tree/e7dd6b3a065bbfb403eda274a1f6d4cf0b12304b)
+
+
+
