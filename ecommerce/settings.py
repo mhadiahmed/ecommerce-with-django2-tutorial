@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'shop.apps.ShopConfig',
     'cart.apps.CartConfig',
     'orders.apps.OrdersConfig',
+    'payment.apps.PaymentConfig',
+    'paypal.standard.ipn',
 ]
 
 MIDDLEWARE = [
@@ -125,3 +127,7 @@ STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 CART_SESSION_ID = 'cart'
+
+PAYPAL_TEST = True
+
+PAYPAL_RECEIVER_EMAIL = 'mhadiahmed63@gmail.com'
