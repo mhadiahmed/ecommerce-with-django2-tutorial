@@ -13,10 +13,11 @@ code lectuer
 
 
 
+
 [05 Registering customer orders](https://github.com/mhadiahmed/ecommerce-with-django2-tutorial/tree/e7dd6b3a065bbfb403eda274a1f6d4cf0b12304b)
 
 
 [06 Integrating a payment gateway](https://github.com/mhadiahmed/ecommerce-with-django2-tutorial/tree/bdfa19d48eb53d3487cb06f57e8eb3a35d4a6e1d)
 
-
+[07 payment notification.mkv](https://github.com/mhadiahmed/ecommerce-with-django2-tutorial/tree/a8270c0d0bce008eafadf7f5a4cc1be6d1e0fa99)
 
