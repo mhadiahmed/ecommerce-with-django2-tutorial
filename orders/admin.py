@@ -15,7 +15,7 @@ class OrderAdmin(admin.ModelAdmin):
 	'''
 		Admin View for Order
 	'''
-	list_display = ('id','first_name','last_name','address','email','city','postal_code',)
+	list_display = ('id','first_name','last_name','address','email','city','postal_code','paid',)
 	list_filter = ('paid','created','updated',)
 	search_fields = ['first_name','last_name','email']
 	inlines = [

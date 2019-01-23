@@ -25,7 +25,7 @@ SECRET_KEY = 'xlk@0)@j!op%8jn7-9=*ohq14relk5ao3-1i(e6$il-d7)tqa%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost','09ea9a00.ngrok.io']
 
 
 # Application definition
@@ -130,4 +130,4 @@ CART_SESSION_ID = 'cart'
 
 PAYPAL_TEST = True
 
-PAYPAL_RECEIVER_EMAIL = 'mhadiahmed63@gmail.com'
+PAYPAL_RECEIVER_EMAIL = 'mhadiahmed63-facilitator@gmail.com'
