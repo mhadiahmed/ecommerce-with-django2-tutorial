@@ -19,5 +19,8 @@ code lectuer
 
 [06 Integrating a payment gateway](https://github.com/mhadiahmed/ecommerce-with-django2-tutorial/tree/bdfa19d48eb53d3487cb06f57e8eb3a35d4a6e1d)
 
-[07 payment notification.mkv](https://github.com/mhadiahmed/ecommerce-with-django2-tutorial/tree/a8270c0d0bce008eafadf7f5a4cc1be6d1e0fa99)
+[07 payment notification](https://github.com/mhadiahmed/ecommerce-with-django2-tutorial/tree/a8270c0d0bce008eafadf7f5a4cc1be6d1e0fa99)
+
+
+[8. Export order to csv fiel & Generating PDF invoices ](https://github.com/mhadiahmed/ecommerce-with-django2-tutorial/tree/bff7fd3b162e89a53dadb3b02348ec348bbd4b90)
 
