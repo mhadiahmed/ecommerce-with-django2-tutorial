@@ -63,17 +63,48 @@
 					<td colspan="4" style="width:100%;text-align:center;">there is no product !</td>
 				</tr>
 			{% endif %}
-				<tr class="total">
+<!--{# 				<tr class="total">
 					<td>
 						Total
 					</td>
 					<td colspan="4"></td>
 					<td class="num">${{cart.get_total_price}}</td>
+				</tr> #}-->
+				{% if cart.coupon %}
+					<tr class="gray">
+						<td>Subtotal</td>
+						<td colspan="4"></td>
+						<td class="num"> {{cart.get_total_price}}</td>
+					</tr>
+					<tr class="gray2">
+						{% block trans   %}
+							{% with code=cart.coupon.code discount=cart.coupon.discount%}
+							    <td colspan="2">"{{code}}" coupon ({{discount}})% off</td>
+							{% endwith %}
+						{% endblock trans %}
+						<td colspan="3"></td>
+						<td class="num neg"> - ${{cart.get_discount|floatformat:"2"}}</td>
+					</tr>
+				{% endif %}
+				<tr class="total">
+					<td>Total</td>
+					<td colspan="4"></td>
+					<td class="num">${{cart.get_total_price_after_discount|floatformat:"2"}}</td>
 				</tr>
 		</tbody>
 	</table>
-	<p class="text-right">
-		<a href="{% url 'shop:product_list' %}">Continu shopping</a>
-		<a href="{% url 'orders:order_create' %}">Checkout</a>
-	</p>
+	<div class="divo">
+		<p>
+			Apply a coupon
+		</p>
+		<form action="{% url 'coupons:apply' %}" method="post">
+			{{coupon_apply_form}}
+			{% csrf_token %}
+			<input type="submit" value="apply" class="btn">
+		</form>
+		<p class="text-right">
+			<a href="{% url 'shop:product_list' %}">Continu shopping</a>
+			<a href="{% url 'orders:order_create' %}">Checkout</a>
+		</p>
+	</div>
 {% endblock content %}

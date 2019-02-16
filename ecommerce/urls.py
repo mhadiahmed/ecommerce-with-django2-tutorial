@@ -24,6 +24,7 @@ urlpatterns = [
     path('orders/',include('orders.urls')),
     path('paypal/', include('paypal.standard.ipn.urls')),
     path('payment/', include('payment.urls')),
+    path('coupons/', include('coupons.urls')),
     path('',include('shop.urls')),
 ]
 if settings.DEBUG:

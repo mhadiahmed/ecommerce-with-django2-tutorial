@@ -139,21 +139,33 @@ tbody .total .num{
 	float:left;
 	margin-left: 100px;
 }
+.neg{
+color:red;
+}
 
 .text-right{
 	float:right;
-	margin-right:200px;
 }
 .text-right :first-child{
 	padding:10px;
 	text-decoration: none;
-	background-color:#F5F5F5; 
+	background-color:#F5F5F5;
+
+}
+.btn {
+	padding:10px;
+	text-decoration: none;
+	background-color:#5892B9; 
+	color:#fff;
+	border:none;
+	border-radius: 10px;
 }
 .text-right :last-child{
 	padding:10px;
 	text-decoration: none;
 	background-color:#5892B9; 
 	color:#fff;
+	border-radius: 5px; 
 }
 .order-info{
 	background-color:#F6F5F5;
@@ -202,4 +214,21 @@ tbody .total .num{
 	padding:30px;
 	margin:0 auto;
 	background-color: #f3f3f3;
+}
+
+.divo {
+		width:70%;
+	margin:0 auto;
+	margin-bottom:10px; 
+}
+.gray{
+	background-color: #eee;
+	display: inline-table;
+	width:100%;
+	margin-bottom: 8px;
+}
+.gray2{
+	display: inline-table;
+	width:100%;
+	
 }
